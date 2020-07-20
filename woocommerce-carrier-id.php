@@ -24,6 +24,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
             'label'     => "Carrier ID",
             'placeholder' => "set carrier ID here",
             'required'  => false
+            'title' => 'Carrier ID',
         );
 
         return $fields;

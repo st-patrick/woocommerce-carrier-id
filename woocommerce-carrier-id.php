@@ -16,7 +16,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     // hook the additional fields into the woocommerce hook for custom shipping options
     add_filter( 'woocommerce_shipping_instance_form_fields_flat_rate' , 'custom_shipping_field' );
     add_filter( 'woocommerce_shipping_instance_form_fields_free_shipping' , 'custom_shipping_field' );
-    add_action( ‘woocommerce_order_status_processing’, ‘add_carrier_id’);
+    add_action( 'woocommerce_order_status_processing', 'add_carrier_id');
 
     // This function will extend the existing fields by the _carrier_id field
     function custom_shipping_field( $fields ) {
@@ -31,7 +31,9 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
     //now, let's make sure that every time an order changes status to "processing", we add the carrier ID
     function add_carrier_id($order_id) {
-
+        $order = wc_get_order( $order_id );
+        $order->update_meta_data( '_carrier_id', 'test value' );
+        $order->save();
     }
 
 }

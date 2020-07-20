@@ -17,3 +17,4 @@ Invincible Brands interview: Wordpress test for a plugin that will add some cust
 
 1. followed best practices from woocommerce plugin guideline (debug mode, check whether woocommerce is installed, ..)
 2. find hook for woocommerce shipping options and add custom field
+3. find hook for when an order changes to processing

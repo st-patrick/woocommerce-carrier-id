@@ -32,7 +32,14 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     //now, let's make sure that every time an order changes status to "processing", we add the carrier ID
     function add_carrier_id($order_id) {
         $order = wc_get_order( $order_id );
-        $order->update_meta_data( '_carrier_id', 'test value' );
+
+        if( $order->has_shipping_method('flat_rate') ) {
+            $order->update_meta_data('_carrier_id', 'flaaaat');
+        }
+        if( $order->has_shipping_method('free_shipping') ) {
+            $order->update_meta_data('_carrier_id', 'freee');
+        }
+
         $order->save();
     }
 

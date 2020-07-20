@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== WooCommerce carrier ID ===
 Contributors: Patrick Reinbold
 Donate link: http://patrickreinbold.com/
 Tags: woocommerce, shipping

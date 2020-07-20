@@ -10,3 +10,10 @@ Invincible Brands interview: Wordpress test for a plugin that will add some cust
     1. Flat-rate: “Method Title”, “Tax Status”, and “Cost”
     2. Free Shipping: “Title” and “Free Shipping Requires”
 + Please save this value with the meta key “_carrier_id” in the order meta data of each order - when the order changes to the order status “Processing” (wc-processing).
+
+
+
+### comments
+
+1. followed best practices from woocommerce plugin guideline (debug mode, check whether woocommerce is installed, ..)
+2. find hook for woocommerce shipping options and add custom field
